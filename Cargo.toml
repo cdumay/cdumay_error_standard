@@ -1,0 +1,16 @@
+[package]
+name = "cdumay_error_standard"
+version = "1.0.0"
+
+authors = ["Cédric Dumay <cedric.dumay@gmail.com>"]
+description = "A Rust Library which define standard errors"
+documentation = "https://docs.rs/cdumay_error_standard"
+edition = "2021"
+homepage = "https://github.com/cdumay/cdumay_error_standard"
+license-file = "LICENSE"
+readme = "README.md"
+repository = "https://github.com/cdumay/cdumay_error_standard"
+
+[dependencies]
+cdumay_error = {version = "1.0", features = ["derive"]}
+serde-value = "0.7"
