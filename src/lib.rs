@@ -61,10 +61,13 @@ use cdumay_error::{define_errors, define_kinds, AsError};
 
 define_kinds! {
     UnknownError = ("Err-00001", 500, "Unexpected error"),
-    IoError = ("Err-00002", 400, "IO error")
+    IoError = ("Err-00002", 400, "IO error"),
+    ValidationError = ("Err-00003", 400, "Validation error")
 }
 define_errors! {
     Unexpected = UnknownError,
     FileRead = IoError,
-    FileNotExists = IoError
+    FileNotExists = IoError,
+    DeserializationError = ValidationError,
+    SerializationError = ValidationError
 }
